@@ -58,6 +58,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. To replace the C# compiler"
                     },
                     SelectedAnswer = "C"
+                },
+
+                new Question
+                {
+                    Id = 4,
+                    Text = "Which EF Core component is primarily responsible for communicating with the database?",
+                    Choices = new List<string>
+                    {
+                        "A. DbContext",
+                        "B. DbSetView",
+                        "C. ControllerContext",
+                        "D. RazorContext"
+                    },
+                    SelectedAnswer = "A"
                 }
             };
 
