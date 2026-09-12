@@ -100,6 +100,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. Student.cs"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 7,
+                    Text = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                    Choices = new List<string>
+                    {
+                        "A. One-to-One",
+                        "B. One-to-Many",
+                        "C. Many-to-Many",
+                        "D. Many-to-One only"
+                    },
+                    SelectedAnswer = "B"
                 }
             };
 
