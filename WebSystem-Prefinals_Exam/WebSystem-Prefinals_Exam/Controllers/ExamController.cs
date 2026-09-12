@@ -198,6 +198,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. EF Core migration validation"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 14,
+                    Text = "Why is server-side validation still necessary if client-side validation exists?",
+                    Choices = new List<string>
+                    {
+                        "A. Client-side validation can be bypassed",
+                        "B. Client-side validation automatically modifies the database",
+                        "C. Server-side validation only works with SQLite",
+                        "D. Client-side validation cannot display messages"
+                    },
+                    SelectedAnswer = "A"
                 }
             };
 
