@@ -254,6 +254,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. To perform client-side validation"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 18,
+                    Text = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                    Choices = new List<string>
+                    {
+                        "A. UseDatabase()",
+                        "B. UseExceptionHandler()",
+                        "C. UseValidationHandler()",
+                        "D. UseMvcDatabase()"
+                    },
+                    SelectedAnswer = "B"
                 }
             };
 
