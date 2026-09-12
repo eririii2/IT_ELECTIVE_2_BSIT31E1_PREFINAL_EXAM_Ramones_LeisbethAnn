@@ -2,28 +2,13 @@
 
 namespace WebSystem_Prefinals_Exam.Models
 {
-    public class ExamViewModel : Controller
+    public class ExamViewModel
     {
-        public string StudentName { get; set; } = "";
-        public string ClassName { get; set; } = "";
-        public string Section { get; set; } = "";
+        public string StudentName { get; set; } = "Leisbeth Ann B. Ramones";
+        public string ClassName { get; set; } = "BSIT";
+        public string Section { get; set; } = "31E1";
 
         public List<Question> Questions { get; set; } = new List<Question>();
-
-        public int Score { get; set; }
-
-        public int TotalQuestions => Questions.Count;
-
-        public double Percentage
-        {
-            get
-            {
-                if (TotalQuestions == 0)
-                    return 0;
-
-                return (double)Score / TotalQuestions * 100;
-            }
-        }
     }
 
     public class Question
@@ -33,8 +18,6 @@ namespace WebSystem_Prefinals_Exam.Models
         public string Text { get; set; } = "";
 
         public List<string> Choices { get; set; } = new List<string>();
-
-        public string CorrectAnswer { get; set; } = "";
 
         public string SelectedAnswer { get; set; } = "";
     }
