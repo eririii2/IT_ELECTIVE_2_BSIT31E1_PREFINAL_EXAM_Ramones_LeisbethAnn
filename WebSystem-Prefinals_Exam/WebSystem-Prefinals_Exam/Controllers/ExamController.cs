@@ -72,6 +72,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. RazorContext"
                     },
                     SelectedAnswer = "A"
+                },
+
+                new Question
+                {
+                    Id = 5,
+                    Text = "What does the following command primarily do? dotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                    Choices = new List<string>
+                    {
+                        "A. Deletes the database",
+                        "B. Creates a new MVC project",
+                        "C. Generates EF Core models and a DbContext from an existing database",
+                        "D. Starts the MVC application"
+                    },
+                    SelectedAnswer = "C"
                 }
             };
 
