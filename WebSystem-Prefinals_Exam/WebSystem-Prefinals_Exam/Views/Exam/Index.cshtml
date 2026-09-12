@@ -1,4 +1,146 @@
-﻿@page
-@model WebSystem_Prefinals_Exam.Views.Exam.IndexModel
+﻿@model WebSystem_Prefinals_Exam.Models.ExamViewModel
+
 @{
+    ViewData["Title"] = "IT Elective 2 Exam";
 }
+
+<div class="exam-page">
+
+    <div class="exam-header">
+
+        <div class="yellow-bar"></div>
+
+        <div class="header-content">
+
+            <h1>IT Elective 2 – Web System and Technologies</h1>
+
+            <p class="exam-subtitle">
+                Prefinals Examination
+            </p>
+
+            <div class="student-information">
+
+                <div class="input-group full-width">
+
+                    <label for="StudentName">
+                        Name
+                    </label>
+
+                    <input type="text"
+                           id="StudentName"
+                           name="StudentName"
+                           form="examForm"
+                           placeholder="Enter your name"
+                           required />
+
+                </div>
+
+
+                <div class="input-row">
+
+                    <div class="input-group">
+
+                        <label for="ClassName">
+                            Class
+                        </label>
+
+                        <input type="text"
+                               id="ClassName"
+                               name="ClassName"
+                               form="examForm"
+                               placeholder="Enter your class"
+                               required />
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="Section">
+                            Section
+                        </label>
+
+                        <input type="text"
+                               id="Section"
+                               name="Section"
+                               form="examForm"
+                               placeholder="Enter your section"
+                               required />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="instructions">
+
+                <strong>Instructions:</strong>
+
+                <p>
+                    Read each question carefully and choose the best answer.
+                    Select one answer for each question before submitting.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <form id="examForm"
+          asp-controller="Exam"
+          asp-action="Submit"
+          method="post">
+
+        @for (int i = 0; i < Model.Questions.Count; i++)
+        {
+            var question = Model.Questions[i];
+
+            <div class="question-card">
+
+                <h2>
+                    @question.Id. @question.Text
+                </h2>
+
+
+                <div class="choices">
+
+                    @for (int j = 0; j < question.Choices.Count; j++)
+                    {
+                        var choice = question.Choices[j];
+
+                        <label class="choice">
+
+                            <input type="radio"
+                                   name="Questions[@i].SelectedAnswer"
+                                   value="@choice.Substring(0, 1)"
+                                   required />
+
+                            <span>
+                                @choice
+                            </span>
+
+                        </label>
+                    }
+
+                </div>
+
+            </div>
+        }
+
+        <div class="submit-area">
+
+            <button type="submit"
+                    class="submit-button">
+
+                Submit Examination
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
