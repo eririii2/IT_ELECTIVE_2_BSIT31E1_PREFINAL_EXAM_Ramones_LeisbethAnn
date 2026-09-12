@@ -114,6 +114,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. Many-to-One only"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 8,
+                    Text = "In the following example, what is SectionId? public int SectionId { get; set; } public Section Section { get; set; }",
+                    Choices = new List<string>
+                    {
+                        "A. Primary key of Student",
+                        "B. Foreign key referencing Section",
+                        "C. Navigation property",
+                        "D. Database connection string"
+                    },
+                    SelectedAnswer = "B"
                 }
             };
 
