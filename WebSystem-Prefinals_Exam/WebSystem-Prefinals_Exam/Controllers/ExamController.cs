@@ -142,6 +142,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. It validates the student's name"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 10,
+                    Text = "What does .Include() generally allow EF Core to do?",
+                    Choices = new List<string>
+                    {
+                        "A. Delete the Section table",
+                        "B. Load related Section data together with Students",
+                        "C. Create a new Student",
+                        "D. Validate Student input"
+                    },
+                    SelectedAnswer = "B"
                 }
             };
 
