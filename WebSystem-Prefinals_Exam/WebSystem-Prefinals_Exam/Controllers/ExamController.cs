@@ -184,6 +184,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. It prevents the query from accessing the database"
                     },
                     SelectedAnswer = "A"
+                },
+
+                new Question
+                {
+                    Id = 13,
+                    Text = "Which type of validation occurs in the browser before a request is sent to the server?",
+                    Choices = new List<string>
+                    {
+                        "A. Database-level validation",
+                        "B. Client-side validation",
+                        "C. Server-side validation",
+                        "D. EF Core migration validation"
+                    },
+                    SelectedAnswer = "B"
                 }
             };
 
