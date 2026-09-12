@@ -170,6 +170,20 @@ namespace WebSystem_Prefinals_Exam.Controllers
                         "D. To prevent controllers from using LINQ"
                     },
                     SelectedAnswer = "B"
+                },
+
+                new Question
+                {
+                    Id = 12,
+                    Text = "Consider this query: var students = _context.Students.Include(s => s.Section).ToList(); What is the main benefit of Include(s => s.Section)?",
+                    Choices = new List<string>
+                    {
+                        "A. It loads the related Section navigation property",
+                        "B. It creates a Section object manually",
+                        "C. It removes the foreign key",
+                        "D. It prevents the query from accessing the database"
+                    },
+                    SelectedAnswer = "A"
                 }
             };
 
